@@ -1,7 +1,6 @@
 from random import choice
 class RandomWalk:
     """A class to generate random walks."""
-
     def __init__(self, num_points=5000):
         """Initialize attributes of a walk"""
         self.num_points = num_points
@@ -24,7 +23,7 @@ class RandomWalk:
 
             y_direction = choice([1, -1])
             y_distance = choice([0, 1, 3, 4])
-            y_step = y_direction = y_distance
+            y_step = y_direction * y_distance
 
             # Reject moves that go nowhere
             if x_step == 0 and y_step == 0:
