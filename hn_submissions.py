@@ -4,6 +4,7 @@ import requests
 
 # Make an API call and store the response.
 url = 'https://hacker-news.firebaseio.com/v0/topstories.json'
+headers = {'Accept': 'application/vnd.github.v3+json'}
 r = requests.get(url)
 print(f"Status code: {r.status_code}")
 
